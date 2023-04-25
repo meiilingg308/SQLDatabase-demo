@@ -1,4 +1,4 @@
-# Database-demo
+# SQLDatabase-demo
 I. Topic and Introduction
 Topic: Fresh fruit juice store
 Introduction: Modern people live in a busy life and often have no time to supplement vitamins. For the purpose of helping people quickly obtain vitamins, the fresh fruit juice store makes a variety of fruits into juices, bringing people organic products, so that people have sufficient nutrition.
