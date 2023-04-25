@@ -1,0 +1,56 @@
+CREATE TABLE  [Customer]
+(
+cId                         CHAR(8)                 	NOT NULL,
+name                        VARCHAR(8)       	 		NOT NULL,
+address                     VARCHAR(40),
+phone                       VARCHAR(10),
+birthday                    DATE, 
+PRIMARY KEY (cId) ON DELETE SET NULL ON UPDATE CASCADE
+);
+CREATE TABLE  [Product]
+(
+pNo                         CHAR(6)               		NOT NULL,
+pName                       VARCHAR(20),
+unitPrice                   DECIMAL(10, 2),
+catalog                     VARCHAR(20),
+productionPlace				VARCHAR(40),
+expirationDate				DATE,
+PRIMARY KEY (pNo)
+);
+CREATE TABLE  [Transaction]
+(
+tNo                         CHAR(5)                	NOT NULL,
+cId                         CHAR(8)              	NOT NULL,
+dNo                         CHAR(10)              	NOT NULL,
+transTime                   DATETIME           		NOT NULL,
+method                      VARCHAR(5)        		NOT NULL,
+bankId                      VARCHAR(14),
+bankName                    VARCHAR(20),
+cardType                    VARCHAR(10),
+cardId                      VARCHAR(10),
+dueDate                     DATE,  
+morning                     TIME                    NOT NULL,
+afternoon                   TIME                 	NOT NULL,
+PRIMARY KEY (tNo),
+UNIQUE (cId, dNo),
+FOREIGN KEY (cId) REFERENCES [Customer](cId)
+);
+CREATE TABLE  [Feedback]
+(
+cId                         CHAR(8)               		NOT NULL,
+tNo                         CHAR(5)              		NOT NULL,
+suggestion                  TEXT
+PRIMARY KEY (cId),
+UNIQUE (tNo),
+FOREIGN KEY (cId)	REFERENCES [Customer](cId),
+FOREIGN KEY (tNo)	REFERENCES [Transaction](tNo)
+);
+CREATE TABLE  [Record]
+(pNo                              CHAR(6)                	NOT NULL,
+tNo                               CHAR(5)                	NOT NULL,
+salePrice                       DECIMAL(10,2)    	NOT NULL,
+amount                         INT                         	NOT NULL,
+PRIMARY KEY (pNo, tNo),
+FOREIGN KEY (pNo) REFERENCES Product(pNo),
+FOREIGN KEY (tNo) REFERENCES [Transaction](tNo)
+);
