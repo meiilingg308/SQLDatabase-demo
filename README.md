@@ -4,13 +4,13 @@ Topic: Fresh fruit juice store
 Introduction: Modern people live in a busy life and often have no time to supplement vitamins. For the purpose of helping people quickly obtain vitamins, the fresh fruit juice store makes a variety of fruits into juices, bringing people organic products, so that people have sufficient nutrition.
 
 II. System function description
-- Order online
+1. Order online
 + Present nutritional information
 + Recommend juices with the proper nutritional content for the parts of your body that need nutritional supplements
 + Show fruit source and shelf life
-- Choose a shipping method: Daily delivery
-- Choose payment method: cash on delivery, credit card, bank transfer
-- Comments
+2. Choose a shipping method: Daily delivery
+3. Choose payment method: cash on delivery, credit card, bank transfer
+4. Comments
 
 III. Data Requirements
 1. Juice (Product)
