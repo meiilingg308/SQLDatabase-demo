@@ -28,6 +28,7 @@ These four entity types have the following properties:
 • Increase the function of customer evaluation (Feedback), so that customers can write (Writes) suggestions to leave comments (Comments) on completed transactions. A proposal is written by a client, and a client can write the proposal multiple times. Evaluation functions include suggestions （suggestion）.
 
 #中文版
+
 I.	專題題目與簡介
 
 題目：鮮果果汁專賣店
